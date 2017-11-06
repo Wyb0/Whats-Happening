@@ -6,4 +6,8 @@ router.get("/", function (request, response){
     response.render("index", {layout: "main"})
 })
 
-module.export = router
+router.get("/search", function (request, response){
+    response.render("search", {layout: "main"})
+})
+
+module.exports = router

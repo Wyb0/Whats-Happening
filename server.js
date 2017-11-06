@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.engine("handlebars", exphbrs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+app.use("/", router);
 
 app.listen(PORT, function () {
     console.log("Listening on Port: " + PORT)
