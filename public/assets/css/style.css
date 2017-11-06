@@ -5,11 +5,24 @@ body {
     background-attachment: fixed;
 }
 
+.display-3{
+    color:White;
+    position: fixed;
+    top: 30%;
+    left: 30%;    
+}
+
+.container{
+    top: 30%;
+    left: 30%;    
+}
+
 #custom-search-input{
     padding: 3px;
     border: solid 1px #E4E4E4;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: #fff; 
+    margin-top:60%  
 }
 
 #custom-search-input input{
