@@ -4,6 +4,7 @@
 
 $(document).ready(function(){
     // new change: eventful api
+    
 
     const searchTerm = "ucf"
     const eventfulKey = "HczB5FQVwXz7KhLN"

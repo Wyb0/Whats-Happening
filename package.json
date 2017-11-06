@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Wyb0/Whats-Happening/issues"
   },
-  "homepage": "https://github.com/Wyb0/Whats-Happening#readme"
+  "homepage": "https://github.com/Wyb0/Whats-Happening#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "request": "^2.83.0",
+    "twit": "^2.2.9"
+  }
 }

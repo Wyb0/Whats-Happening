@@ -1,8 +1,11 @@
-var express = require("express")
+const express = require("express")
+const path = require("path")
+const request = require("request")
+const router = require("./controller/controller.js")
 
-var app = express()
-var PORT = process.env.PORT || 8000
+const app = express()
+const PORT = process.env.PORT || 8000
 
 app.listen(PORT, function () {
     console.log("Listening on Port: " + PORT)
-}
+})
