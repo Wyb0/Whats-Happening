@@ -2,18 +2,20 @@
     <div class="row">
         <h1 class="display-3">What's Happening?</h1>
     </div>
-	<div class="row">
+    <div class="row">
         <div class="col-lg-12">
-            <div id="custom-search-input">
-                <div class="input-group col-lg-12">
-                    <input type="text" class="form-control input-lg" placeholder="Search by Location (ex. Orlando, FL; UCF)" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </span>
+            <form method="POST" action="/search">
+                <div id="custom-search-input">
+                    <div class="input-group col-lg-12">
+                        <input type="text" name="location" class="form-control input-lg" placeholder="Search by Location (ex. Orlando, FL; UCF)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-info btn-lg" type="submit">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
-	</div>
+    </div>
 </div>

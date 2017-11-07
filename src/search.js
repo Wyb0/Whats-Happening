@@ -19,7 +19,7 @@ var T = new Twit({
   access_token_secret: 'ewohY9FQgjUrcaIR17x02iGvsRyr1B61466BDfIA7FpbZ',
 });
 
-let input ="ucf"
+let input="ucf";
 
 function search (input) {
   geocoder.geocode(input, function(error, data) {
@@ -41,8 +41,6 @@ function search (input) {
       }) 
   });
 
-  
-
   client.searchEvents({ keywords: input }, function(err, data){
     if(err){
         return console.error(err);
@@ -50,9 +48,11 @@ function search (input) {
     //console.log('Event listings: ' + JSON.stringify(data.search.events.event[0]));
     //print the title of each event, url, description, start_time
     for (var i=0; i < data.search.events.event.length; i++){
-      //console.log("Title: " + data.search.events.event[i].title + "\nURL: " + data.search.events.event[i].url+ "\nDescription: " + data.search.events.event[i].description + "\nStart Time: " + data.search.events.event[i].start_time);
+      console.log("Title: " + data.search.events.event[i].title + "\nURL: " + data.search.events.event[i].url+ "\nDescription: " + data.search.events.event[i].description + "\nStart Time: " + data.search.events.event[i].start_time);
     }
   });
 }
 
 search(input)
+
+module.exports = search(input)
