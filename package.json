@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Wyb0/Whats-Happening#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "eventful-node": "^1.1.1",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "jquery": "^3.2.1",
