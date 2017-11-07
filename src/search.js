@@ -14,7 +14,7 @@ const options = {
 const geocoder = NodeGeocoder(options);
 
 geocoder.geocode('ucf', function(error, data) {
-  console.log(data[0])
+  console.log("Address: " + data[0].formattedAddress + "\nLatitude: " + data[0].latitude + "\nLongitude" + data[0].longitude);
 });
 
 client.searchEvents({ keywords: 'ucf' }, function(err, data){
