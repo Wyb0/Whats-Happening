@@ -19,7 +19,7 @@ function search (input) {
     
   });
 
-  client.searchEvents({ keywords: 'ucf' }, function(err, data){
+  client.searchEvents({ keywords: input }, function(err, data){
     if(err){
         return console.error(err);
     }
