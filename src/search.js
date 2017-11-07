@@ -29,7 +29,7 @@ function search (input) {
     //console.log(lat)
     let long = data[0].longitude
       T.get('geo/search', { lat: lat, long: long, radius: "1mi", count: 2 }, function(err, data, response) {
-    //   //console.log("Twitter: " + JSON.stringify(data))
+        //console.log("Twitter: " + JSON.stringify(data))
         //console.log(data.result.places[0].id);
         let placeID = data.result.places[0].id
           T.get('search/tweets', { q: 'place:' + placeID, count: 20 }, function(err, data, response) {
@@ -37,7 +37,7 @@ function search (input) {
             for (j=0; j < data.statuses.length; j++){
               console.log("Text: " + data.statuses[j].text + "\nCreated: " + data.statuses[j].created_at + "\nUser: " + data.statuses[j].user.screen_name)
             }
-        })
+          })
       }) 
   });
 
