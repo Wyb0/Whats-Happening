@@ -12,7 +12,9 @@ router.get("/search", function (request, response){
 })
 
 router.post("/search", function (request, response){
+    let input = request.body.location
     search(request.body.location)
+    response.render("search", {layout: "main"})
     console.log(request.body.location)
 })
 

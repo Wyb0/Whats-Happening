@@ -19,8 +19,6 @@ var T = new Twit({
   access_token_secret: 'ewohY9FQgjUrcaIR17x02iGvsRyr1B61466BDfIA7FpbZ',
 });
 
-let input="ucf";
-
 function search (input) {
   geocoder.geocode(input, function(error, data) {
     //console.log("Address: " + data[0].formattedAddress + "\nLatitude: " + data[0].latitude + "\nLongitude" + data[0].longitude);
@@ -53,6 +51,5 @@ function search (input) {
   });
 }
 
-search(input)
 
-module.exports = search(input)
+module.exports = search;
