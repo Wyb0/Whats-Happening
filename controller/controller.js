@@ -1,21 +1,25 @@
 const express = require("express");
-const search = require ("../src/search");
+const search = require ("../src/search")
+const app = express.Router();
 
-const router = express.Router()
+ module.exports = function(app){
 
-router.get("/", function (request, response){
-    response.render("index", {layout: "main"})
-})
+    app.get("/", function (req, res){
+        res.render("index")
+        //search.megaSearch("ucf");
+        console.log('route hit');
+    })
 
-router.get("/search", function (request, response){
-    response.render("search", {layout: "main"})
-})
+    app.get("/search", function (req, res){
+        res.render("search")
+    })
 
-router.post("/search", function (request, response){
-    let input = request.body.location
-    search(request.body.location)
-    response.render("search", {layout: "main"})
-    console.log(request.body.location)
-})
-
-module.exports = router
+    app.post("/search", function (req, res){
+        //console.log("fgjkfskldgjjfklds" , req)
+        //let locationSearch = res.location
+        //console.log(locationSearch)
+       search.megaSearch("fsu");
+       res.render("search", {data: res})
+        //console.log(res)
+    })
+ };
